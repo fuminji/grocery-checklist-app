@@ -6,6 +6,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Roboto:wght@300;900&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -14,11 +17,17 @@
     </head>
     <body>
         <div class="container">
-            <img src="assets/cat.png">
-            <input type="text" id="input-field" placeholder="Add items to cart">
-            <button id="add-button">Add to cart</button>
+            <img src="grocery.png">
+            <input type="text" id="input-field" placeholder="Add items to cart 🍄" required>
+            <button type="submit" id="add-button">Add to cart 👀</button>
             <ul id="shopping-list">
             </ul>
+        </div>
+        <div class="modal-success" id="modal-success">
+            <p>Success! 🍻</p>
+        </div>
+        <div class="modal-deleted" id="modal-deleted">
+            <p>Entry Deleted 💀</p>
         </div>
         <script src="index.js" type="module"></script>
     </body>

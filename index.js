@@ -12,6 +12,8 @@ const shoppingListInDB = ref(database, "shoppingList")
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
+const succesBtn = document.getElementById('modal-success')
+const failedBtn = document.getElementById('modal-deleted')
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
@@ -19,6 +21,11 @@ addButtonEl.addEventListener("click", function() {
     push(shoppingListInDB, inputValue)
     
     clearInputFieldEl()
+    succesBtn.style.display = 'block';
+    setTimeout(function() {
+        succesBtn.style.display = 'none';
+    }, 1000)
+    
 })
 
 onValue(shoppingListInDB, function(snapshot) {
@@ -59,6 +66,10 @@ function appendItemToShoppingListEl(item) {
         let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
         
         remove(exactLocationOfItemInDB)
+        failedBtn.style.display = 'block';
+    setTimeout(function() {
+        failedBtn.style.display = 'none';
+    }, 1000)
     })
     
     shoppingListEl.append(newEl)

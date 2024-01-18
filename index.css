@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Righteous', sans-serif, 'Noto Color Emoji';
     background-color: #43766C;
     color: #432000;
     user-select: none;
@@ -17,6 +17,7 @@ html, body {
 img {
     width: 150px;
     margin: 0 auto;
+    padding: 25px;
 }
 
 input {
@@ -68,4 +69,30 @@ ul li {
 ul li:hover {
     background-color: #FFECC7;
     cursor: pointer;
+}
+
+.modal-success {
+    background-color: #4BB543;
+    color: whitesmoke;
+    position: fixed;
+    border-radius: 20px;
+    top: 6px;
+    left: 8px;
+    text-align: center;
+    padding: 2px 20px;
+    font-weight: 700;
+    display: none;
+}
+
+.modal-deleted {
+    background-color: #FC100D;
+    color: whitesmoke;
+    position: fixed;
+    border-radius: 20px;
+    top: 6px;
+    left: 8px;
+    text-align: center;
+    padding: 2px 20px;
+    font-weight: 700;
+    display: none;
 }
