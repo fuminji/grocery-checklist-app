@@ -17,14 +17,17 @@ const failedBtn = document.getElementById('modal-deleted')
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
-    
-    push(shoppingListInDB, inputValue)
+    if (inputValue === '') {
+        return;
+    } else {
+        push(shoppingListInDB, inputValue)
     
     clearInputFieldEl()
     succesBtn.style.display = 'block';
     setTimeout(function() {
         succesBtn.style.display = 'none';
     }, 1000)
+    }
     
 })
 
